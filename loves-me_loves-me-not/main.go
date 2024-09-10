@@ -5,20 +5,18 @@ import "strings"
 func LovesMe(itr int) string {
 	var str = []string{}
 	for i := 1; i <= itr; i++ {
+		var appendString = ""
 		if i%2 != 0 {
-			if i == itr {
-				str = append(str, "LOVES ME")
-				break
-			}
-			str = append(str, "Loves me")
+			appendString = "Loves me"
 		}
 		if i%2 == 0 {
-			if i == itr {
-				str = append(str, "LOVES ME NOT")
-				break
-			}
-			str = append(str, "Loves me not")
+			appendString = "Loves me not"
 		}
+
+		if i == itr {
+			appendString = strings.ToUpper(appendString)
+		}
+		str = append(str, appendString)
 	}
 	return strings.Join(str, ", ")
 }
