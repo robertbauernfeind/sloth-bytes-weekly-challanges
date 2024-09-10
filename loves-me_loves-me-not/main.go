@@ -3,16 +3,10 @@ package lovesmelovesmenot
 import "strings"
 
 func LovesMe(itr int) string {
+	var parts = []string{"Loves me not", "Loves me"}
 	var str = []string{}
 	for i := 1; i <= itr; i++ {
-		var appendString = ""
-		if i%2 != 0 {
-			appendString = "Loves me"
-		}
-		if i%2 == 0 {
-			appendString = "Loves me not"
-		}
-
+		var appendString = parts[i%2]
 		if i == itr {
 			appendString = strings.ToUpper(appendString)
 		}
