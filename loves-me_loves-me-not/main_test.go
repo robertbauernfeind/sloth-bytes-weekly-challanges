@@ -4,6 +4,8 @@ import (
 	"testing"
 )
 
+// https://slothbytes.beehiiv.com/p/wasm
+
 func TestLovesMe(t *testing.T) {
 	var tests = []struct {
 		p      int
